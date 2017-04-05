@@ -1,0 +1,14 @@
+{
+  "name": "rliu01-srechallenge",
+  "version": "0.1.0",
+  "author": "rliu01",
+  "summary": "sre-challenge",
+  "license": "Apache 2.0",
+  "source": "https://github.com/rliu01/SREChallenge",
+  "project_page": "https://github.com/rliu01/SREChallenge",
+  "issues_url": "https://github.com/rliu01/SREChallenge/issues",
+  "dependencies": [
+    {"version_requirement":">= 1.0.0","name":"puppetlabs-stdlib"}
+  ]
+}
+
