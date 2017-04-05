@@ -1,3 +1,5 @@
+# Define file property
+
 define httpd::file (
   $ensure  = undef,
   $confd   = '/etc/httpd/conf.d',
@@ -5,8 +7,7 @@ define httpd::file (
   $group   = 'root',
   $mode    = '0644',
   $source  = undef,
-  $content = undef,
-) {
+  $content = undef,) {
   file { "${confd}/${title}":
     ensure  => $ensure,
     owner   => $owner,
@@ -19,8 +20,8 @@ define httpd::file (
     require => Package['httpd'],
   }
 }
-file {'httpd.conf':
+
+file { 'httpd.conf':
   ensure => present,
-  path =>'/etc/httpd/conf/httpd.conf'
-  
+  path   => '/etc/httpd/conf/httpd.conf'
 }
