@@ -29,7 +29,7 @@ class httpd (
   include 'httpscheck'
 
   # Replace welcome.conf for SSL
-  httpd::file { '$sslconf/welcome.conf': source => "puppet:///modules/srechallenge/files/welcome.conf", }
+  file { '$sslconf/welcome.conf': source => "puppet:///modules/srechallenge/files/welcome.conf", }
 }
 
 # Verify http running and restart
