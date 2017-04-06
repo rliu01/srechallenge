@@ -1,18 +1,4 @@
 # Apply nhttpd configuration
-class httpd::install ($ensure = 'installed',) {
-  package { 'httpd': ensure => $ensure }
-
-}
-
-service { 'httpd':
-  name      => httpd,
-  ensure    => running,
-  enable    => true,
-  subscribe => File['httpd.conf'],
-}
-
-# Place SSL keys
-
 class sslfile {
   file { '/etc/pki/tls/private/localhost.key':
     ensure => present,
@@ -41,6 +27,16 @@ class sslfile {
     ensure  => "present",
     source  => "puppet:///modules/srechallenge/files/index.html",
     require => File[$::documentroot],
+  }
+  firewall { '100 allow https access':
+    port   => '443',
+    proto  => tcp,
+    action => accept,
+  }
+  firewall { '100 allow http access':
+    port   => '80',
+    proto  => tcp,
+    action => accept,
   }
 
 }

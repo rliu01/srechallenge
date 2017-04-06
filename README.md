@@ -65,7 +65,7 @@ with things. (We are working on automating this section!)
 
 ## Limitations
 
-This is where you list OS compatibility, version compatibility, etc.
+This code only supports CentOS 6.X. 
 
 ## Development
 
