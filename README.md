@@ -73,7 +73,14 @@ Since your module is awesome, other users will want to play with it. Let them
 know what the ground rules for contributing are.
 
 ## Release Notes/Contributors/Etc **Optional**
-
+Complement Functions:
+- Install and configure a web server on CentOS 6.X host
+- Configure https (a self-signed certificate is acceptable for this challenge)
+- Configure the http/https homepage to display "SRE CHALLENGE"
+- Configure host-based firewall for ports 22, 80 and 443
+- Create an automated test to verify the web server is listening on port 443. 
+Known Issues:
+- http failed to redirect to https
 If you aren't using changelog, put your release notes here (though you should
 consider using changelog). You may also add any additional sections you feel are
 necessary or important to include here. Please use the `## ` header.
